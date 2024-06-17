@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="poster">
+        <div class="header">
+            <h1>Event Title</h1>
+        </div>
+        <div class="content">
+            <h2>Subheading</h2>
+            <p>Join us for an exciting event full of fun activities, great food, and amazing entertainment. Don't miss out!</p>
+        </div>
+        <div class="footer">
+            <p>Date: June 20, 2024</p>
+            <p>Time: 6:00 PM - 9:00 PM</p>
+            <p>Location: Central Park, New York</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.poster {
+    background-color: white;
+    width: 600px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+document.addEventListener('DOMContentLoaded', function () {
+    const poster = document.querySelector('.poster');
+    poster.addEventListener('click', function () {
+        poster.style.backgroundColor = poster.style.backgroundColor === 'white' ? '#e0f7fa' : 'white';
+    });
+});
